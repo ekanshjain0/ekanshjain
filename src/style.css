@@ -1,0 +1,678 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* overflow: hidden; */
+  font-family: "Poppins";
+ 
+}
+nav{
+
+ display: inline-flex;
+ /* display: flex; */
+ position: fixed;
+ width: 100%;
+ min-height: 12vh;
+ align-items: center;
+ justify-content: space-between;
+background-color: white;
+/* justify-content: center; */
+margin: 2% 0%;
+
+z-index: 2;
+}
+.logo{
+  display: flex;
+  justify-self: center;
+  
+  font-size: 1rem;
+  color: rgb(33,33,33);
+overflow: hidden;
+}
+
+.webgl{
+ width: 100%; 
+  height: 100%;
+ overflow: hidden; 
+}
+canvas{
+  overflow: hidden;
+}
+.can{
+  display: flex;
+object-fit: cover;
+justify-content: center;
+justify-items: center;
+}
+.cta{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.cta-text{
+  display: flex;
+  font-size: 2rem;
+  opacity: 0.6;
+}
+.cta-text h2{
+  overflow: hidden;
+}
+.cta-text span{
+  padding: 0rem 0.4rem;
+  display: block;
+  text-shadow: rgba(0,0,0,0.4) 0px 0px 20px;
+}
+.cta-btn{
+  margin: auto;
+  padding: 0.5rem 2rem;
+  background: white;
+  border-radius: 0.3rem;
+  color: rgb(33,33,33);
+  border: none;
+ opacity: 0.4;
+  text-decoration: none;
+  
+}
+.cta-btn:hover{
+  opacity: 0.8;
+}
+a{
+  font-size: 0.7rem;
+  color: rgb(33,33,33);
+  text-decoration: none;
+}
+
+#controllers{
+  /* position: fixed; */
+  z-index: 1;
+  left: 0;
+  top: 0;
+  text-align: center;
+  width: 100%;
+  padding: 10px;
+  
+  justify-content: space-evenly;
+}
+.button{
+  position: relative;
+  border: none;
+  background: white;
+  color: black;
+  padding: 8px 20px;
+  cursor: pointer;
+  outline: none;
+  margin:1rem 2rem;
+  font-family: sans-serif;
+  font-size: 1rem;
+  
+}
+.button::before{
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 6%;
+  bottom: 0;
+  left: 0;
+  background-color: rgb(79, 247, 146);;
+  visibility: hidden;
+  transform: scale(0);
+  transition: all 0.3s ease-in-out;
+}
+.button:hover::before{
+visibility: visible;
+transform: scaleX(1);  
+}
+.section1{
+  width: 100%;
+  height: 100vh;
+  background-color: aqua;
+}
+
+/****************************************/
+
+.section{
+  margin-top: -2%;
+  width: 100%;
+  height: 100vh;
+  color: rgb(33,33,33);
+}
+.head{
+  display: flex;
+  position: relative;
+  width: 100%;
+  margin-top: 10%;
+  justify-content: center;
+  font-size: 2.4rem;
+  z-index: 2;
+  
+}
+.about-content{
+  display: flex;
+  position: relative;
+width: 80%;
+margin: auto;
+margin-top: 3%;
+justify-self: center;
+font-size: 1em;
+font-weight: 200;
+}
+/*****************************/
+.body {
+  padding: 0;
+  margin: 0;
+  /* overflow: hidden; */
+  -webkit-user-select: none;
+     -moz-user-select: none;
+       -o-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+          color: rgb(0, 0, 0);
+}
+#c {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.tag{
+  position: relative;
+  display: flex;
+  font-weight: 900;
+font-style: italic;
+font-size: 1.2rem;
+cursor: pointer;
+margin: 0 5%;
+color: #eb6c3f;
+z-index:3;
+
+
+}
+.tagc{
+  position: relative;
+  display: flex;
+  font-weight: 900;
+  font-style: italic;
+font-size: 1.2rem;
+transition: 0.5s;
+cursor: pointer;
+margin: 0 5%;
+color: #eb6c3f;
+z-index:3;
+}
+
+.tagh{
+  display: flex;
+  font-weight: 900;
+font-style: italic;
+font-size: 1.2rem;
+cursor: pointer;
+color: #eb6c3f;
+
+}
+.taghc{
+  display: flex;
+  font-weight: 900;
+  font-style: italic;
+font-size: 1.2rem;
+transition: 0.5s;
+cursor: pointer;
+color: #eb6c3f;
+}
+.fp-watermark{
+  display: none;
+}
+
+
+/***********************************************/
+
+
+
+/* body, html {
+  background-color: #EEE;
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #000;
+} */
+.skills-card{
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 5%;
+  justify-content: space-evenly;
+}
+.skill-card {
+  position: relative;
+  margin: 5%;
+  padding: 20px;
+  width: 15em;
+  background-color: #FFF;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  cursor: pointer;
+}
+.skill-card:hover {
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+.skill-card:hover .skill-card__header {
+  height: 40px;
+}
+.skill-card:hover .skill-card__header1 {
+  height: 40px;
+}
+.skill-card:hover .skill-card__header2 {
+  height: 40px;
+}
+.skill-card:hover .skill-card__header3 {
+  height: 40px;
+}
+.skill-card:hover .skill-card__header4 {
+  height: 40px;
+}
+.skill-card:hover .skill-card__header5 {
+  height: 40px;
+}
+.skill-card:hover .skill-card__header .skill-card__icon {
+  transform: translateX(-50%) translateY(-50%) scale(3);
+}
+.skill-card:hover .skill-card__header1 .skill-card__icon {
+  transform: translateX(-50%) translateY(-50%) scale(3);
+}
+.skill-card:hover .skill-card__header2 .skill-card__icon {
+  transform: translateX(-50%) translateY(-50%) scale(3);
+}
+.skill-card:hover .skill-card__header3 .skill-card__icon {
+  transform: translateX(-50%) translateY(-50%) scale(3);
+}
+.skill-card:hover .skill-card__header4 .skill-card__icon {
+  transform: translateX(-50%) translateY(-50%) scale(3);
+}
+.skill-card:hover .skill-card__header5 .skill-card__icon {
+  transform: translateX(-50%) translateY(-50%) scale(3);
+}
+.skill-card:hover .skill-card__body {
+  height: 170px;
+}
+.skill-card:hover .skill-card__body .skill-card__knowledge li {
+  transform: translateX(0);
+  transition-timing-function: cubic-bezier(0, 1.5, 1, 1);
+  transition-duration: 0.5s;
+}
+.skill-card:hover .skill-card__body .skill-card__knowledge li:nth-child(1) {
+  transition-delay: 0.25s;
+}
+.skill-card:hover .skill-card__body .skill-card__knowledge li:nth-child(2) {
+  transition-delay: 0.5s;
+}
+.skill-card:hover .skill-card__body .skill-card__knowledge li:nth-child(3) {
+  transition-delay: 0.75s;
+}
+.skill-card:hover .skill-card__body .skill-card__knowledge li:nth-child(4) {
+  transition-delay: 1s;
+}
+.skill-card:hover .skill-card__body .skill-card__knowledge li:nth-child(5) {
+  transition-delay: 1.25s;
+}
+.skill-card:hover .skill-card__body .skill-card__knowledge li:nth-child(6) {
+  transition-delay: 1.5s;
+}
+.skill-card .skill-card__header {
+  position: relative;
+  background-color: #eb6c3f;
+  height: 170px;
+  margin: -20px -20px 20px -20px;
+  transition: height 0.5s;
+  overflow: hidden;
+}
+
+.skill-card__header1{
+  position: relative;
+  background-color: #103cde;
+  height: 170px;
+  margin: -20px -20px 20px -20px;
+  transition: height 0.5s;
+  overflow: hidden;
+
+}
+.skill-card__header2{
+  position: relative;
+  background-color: #f6e03e;
+  height: 170px;
+  margin: -20px -20px 20px -20px;
+  transition: height 0.5s;
+  overflow: hidden;
+
+}
+.skill-card__header3{
+  position: relative;
+  background-color: #ffffff;
+  height: 170px;
+  margin: -20px -20px 20px -20px;
+  transition: height 0.5s;
+  overflow: hidden;
+
+}
+.skill-card__header4{
+  position: relative;
+  background-color: #ffffff;
+  height: 170px;
+  margin: -20px -20px 20px -20px;
+  transition: height 0.5s;
+  overflow: hidden;
+
+}
+.skill-card__header5{
+  position: relative;
+  background-color: #ffffff;
+  height: 170px;
+  margin: -20px -20px 20px -20px;
+  transition: height 0.5s;
+  overflow: hidden;
+
+}
+.skill-card__header6{
+  position: relative;
+  background-color: #ffffff;
+  height: 170px;
+  margin: -20px -20px 20px -20px;
+  transition: height 0.5s;
+  overflow: hidden;
+
+}
+.skill-card .skill-card__header .skill-card__icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+  display: block;
+  width: 128px;
+  height: 128px;
+  transition: transform 0.5s;
+}
+.skill-card .skill-card__header1 .skill-card__icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+  display: block;
+  width: 128px;
+  height: 128px;
+  transition: transform 0.5s;
+}
+.skill-card .skill-card__header2 .skill-card__icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+  display: block;
+  width: 128px;
+  height: 128px;
+  transition: transform 0.5s;
+}
+
+.skill-card .skill-card__header3 .skill-card__icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+  display: block;
+  width: 128px;
+  height: 128px;
+  transition: transform 0.5s;
+}
+.skill-card .skill-card__header4 .skill-card__icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+  display: block;
+  width: 128px;
+  height: 128px;
+  transition: transform 0.5s;
+}
+
+
+.skill-card .skill-card__header5 .skill-card__icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+  display: block;
+  width: 128px;
+  height: 128px;
+  transition: transform 0.5s;
+}
+.skill-card .skill-card__header5 .skill-card__icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+  display: block;
+  width: 128px;
+  height: 128px;
+  transition: transform 0.5s;
+}
+
+.skill-card .skill-card__body {
+  height: 40px;
+  transition: height 0.5s;
+  overflow: hidden;
+}
+.skill-card .skill-card__body .skill-card__title {
+  font-size: 1.4em;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.skill-card .skill-card__body .skill-card__duration {
+  color: #9E9E9E;
+  font-style: italic;
+}
+.skill-card .skill-card__body .skill-card__knowledge {
+  margin-top: 10px;
+  color: #424242;
+}
+.skill-card .skill-card__body .skill-card__knowledge li {
+  margin-top: 5px;
+  transition-duration: 0;
+  transition-delay: 0.5s;
+  transform: translateX(-100%);
+}
+
+/********Form****************/
+.s4{
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+}
+
+form {
+  min-height: 60vh;
+  width: 80vw;
+  background: white;
+  color: #777474;
+  border-radius: 2rem;
+  padding: 5rem 5rem;
+  display: flex;
+  position: relative;
+overflow: hidden;
+}
+
+.title {
+  color: #6391e8;
+}
+.contact-right,
+.contact-left {
+  flex: 1;
+}
+.contact-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.input {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  border: none;
+  outline: none;
+  color: #777474;
+  font-size: 0.7rem;
+}
+.input-container {
+  position: relative;
+  
+}
+.placeholder {
+  position: relative;
+  z-index: 1;
+  pointer-events: none;
+  padding: 0.1rem 0rem;
+  font-size: 1rem;
+  opacity: 0.6;
+  transform-origin: left;
+}
+.line-svg {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  overflow: visible;
+  opacity: 0.8;
+}
+
+.checkbox-label {
+  font-size: 0.7rem;
+}
+.promo-container {
+  position: relative;
+  display: flex;
+}
+.checkbox {
+  opacity: 0;
+  cursor: pointer;
+  z-index: 3;
+}
+.checkbox-label {
+  padding-left: 0.5rem;
+}
+.checkbox-container {
+  position: relative;
+  height: 1rem;
+  width: 1rem;
+  border-radius: 3px;
+  overflow: hidden;
+}
+.checkmark,
+.checkbox {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 2px solid #c5c5c5;
+}
+.checkbox-fill {
+  position: absolute;
+  background: #6190e8;
+  width: 100%;
+  height: 100%;
+  top: 100%;
+}
+
+.tick-mark {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.6);
+  z-index: 2;
+}
+
+button {
+  font-family: "Poppins" sans-serif;
+  font-weight: 500;
+  font-size: 0.6rem;
+  background: #6190e8;
+  color: white;
+  border-radius: 0.2rem;
+  border-style: none;
+  padding: 0.5rem 2.5rem;
+  cursor: pointer;
+  margin-top: 1rem;
+  align-self: flex-start;
+}
+
+#character {
+  position: absolute;
+  transform: scale(0.6) translate(0%, 30%);
+  bottom: 0;
+  left: 0;
+  transform-origin: bottom;
+}
+
+.submitted {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  color: #777474;
+  font-size: 1rem;
+  pointer-events: none;
+  text-align: center;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+}
+
+@media screen and (max-width: 812px) {
+  form {
+    width: 90vw;
+    min-height: 80vh;
+    flex-direction: column;
+    padding: 8rem 3rem;
+  }
+
+  .line-svg {
+    width: 100%;
+  }
+  #character {
+    transform: scale(0.4) translate(0%, 30%);
+  }
+  .input{
+    position: relative;
+  }
+  .input-container{
+    margin: 1rem 0 ;
+    
+  }
+}
+
+/*****************************/
+.body {
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+       -o-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+          color: rgb(0, 0, 0);
+}
+#c {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.icons{
+  display: flex;
+  width:100%;
+  height: 100%;
+  
+}
+.icon{
+  margin: 0.1rem;
+  width: 100%;
+  height: 40%;
+}
